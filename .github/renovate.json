@@ -1,0 +1,62 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":dependencyDashboard", 
+    ":semanticPrefixFixDepsChoreOthers", 
+    ":ignoreModulesAndTests",
+    "schedule:weekly",
+    ":separateMultipleMajorReleases",
+    ":approveMajorUpdates",
+    ":prNotPending",
+    ":maintainLockFilesWeekly",
+    "group:monorepos", 
+    "group:recommended", 
+    "mergeConfidence:age-confidence-badges", 
+    "replacements:all", 
+    "workarounds:all",
+    "helpers:forgejoDigestChangelogs", 
+    "helpers:giteaDigestChangelogs", 
+    "helpers:githubDigestChangelogs", 
+    "helpers:gitlabDigestChangelogs"
+  ],
+  "customManagers": [
+    {
+      "customType": "jsonata",
+      "datasourceTemplate": "npm",
+      "depNameTemplate": "@biomejs/biome",
+      "fileFormat": "json",
+      "managerFilePatterns": [
+        "**/biome.{json,jsonc}"
+      ],
+      "matchStrings": [
+        "{\"currentValue\": $split($.\"$schema\",(\"/\"))[-2]}"
+      ]
+    },
+    {
+      "autoReplaceStringTemplate": "\"@tsconfig/node{{{major}}}/tsconfig.json\"",
+      "currentValueTemplate": "{{{major}}}",
+      "customType": "regex",
+      "datasourceTemplate": "npm",
+      "managerFilePatterns": [
+        "**/{j,t}sconfig.json",
+        "**/{j,t}sconfig.*.json"
+      ],
+      "matchStrings": [
+        "\"(?<depName>@tsconfig/node(?<major>\\d+))/tsconfig\\.json\""
+      ]
+    },
+    {
+      "autoReplaceStringTemplate": "\"@tsconfig/node{{{major}}}\"",
+      "currentValueTemplate": "{{{major}}}",
+      "customType": "regex",
+      "datasourceTemplate": "npm",
+      "managerFilePatterns": [
+        "**/{j,t}sconfig.json",
+        "**/{j,t}sconfig.*.json"
+      ],
+      "matchStrings": [
+        "\"(?<depName>@tsconfig/node(?<major>\\d+))\""
+      ]
+    }
+  ]
+}

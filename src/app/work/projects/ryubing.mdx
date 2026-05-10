@@ -1,0 +1,124 @@
+---
+title: "Ryubing"
+publishedAt: "2024-10-01"
+summary: "Ryubing - a Nintendo Switch 1 emulator, based on the discontinued Ryujinx."
+images:
+  - "/images/projects/ryu/ryubing_banner_project.jpg"
+  - "/images/projects/ryu/newsuperbanner.png"
+team:
+  - name: "GreemDev"
+    role: "UI, QoL & CI/CD"
+    avatar: "/images/avatar.png"
+    github: "https://github.com/GreemDev"
+  - name: "sh0inx"
+    role: "Maintainer"
+    avatar: "/images/projects/ryu/maintainer-sh0inx.jpg"
+    github: "https://github.com/sh0inx"
+  - name: "LotP"
+    role: "Maintainer"
+    avatar: "/images/projects/ryu/maintainer-lotp.png"
+    github: "https://github.com/LotP1"
+link: "https://git.ryujinx.app/projects/Ryubing"
+linkIcon: "forgejo"
+---
+
+Ryubing/Ryujinx is an open-source Nintendo Switch 1 emulator, originally created by gdkchan, written in C#.
+This emulator aims at providing excellent accuracy and performance, a user-friendly interface and consistent builds.
+It was written from scratch and development on the project began in September 2017.
+
+Ryubing is available on a self-managed [modified Forgejo](https://github.com/Ryubing/forgejo) instance under the [MIT license](https://git.ryujinx.app/projects/Ryubing/src/branch/master/LICENSE.txt).
+
+On October 1st 2024, Ryujinx was discontinued as the creator was forced to abandon the project.
+<br/>This fork, Ryubing, is intended to be a QoL uplift for existing Ryujinx users.
+<br/>This is not a Ryujinx revival project. This is not a Phoenix project.
+<br/>Guides and documentation can be found on [docs.ryujinx.app](https://docs.ryujinx.app).
+
+
+## Features
+
+<AccordionGroup background="surface"
+  items={[
+    {
+      title: "Audio",
+      content:
+        <Text onBackground="neutral-weak">
+          Audio output is entirely supported, audio input (microphone) isn't supported.<br/><br/>
+          We use C# wrappers for <a href="https://openal-soft.org/">OpenAL</a>, and <a href="https://www.libsdl.org/">SDL3</a> & <a href="http://libsound.io/">libsoundio</a> as fallbacks.
+        </Text>
+    },
+    {
+      title: "CPU",
+      content:
+        <Text onBackground="neutral-weak">
+          The CPU emulator, ARMeilleure, emulates an ARMv8 CPU and currently has support for most 64-bit ARMv8 and some of the ARMv7 (and older) instructions, including partial 32-bit support.<br/><br/>
+          It translates the ARM code to a custom <a href="https://wikipedia.org/wiki/Intermediate_representation">IR</a>, performs a few optimizations, and turns that into x86 code.<br/>
+          There are three memory manager options available depending on the user's preference, leveraging both software-based (slower) and host-mapped modes (much faster).<br/><br/>
+          The fastest option (host, unchecked) is set by default.<br/><br/>
+          Ryujinx also features an optional Profiled Persistent Translation Cache, which essentially caches translated functions so that they do not need to be translated every time the game loads.
+          The net result is a significant reduction in load times (the amount of time between launching a game and arriving at the title screen) for nearly every game.
+          <br/>
+          <Text onBackground="info-strong">NOTE: This feature is enabled by default in the Options menu &gt; System tab.</Text>
+          <br/><br/>
+          You must launch the game at least twice to the title screen or beyond before performance improvements are unlocked on the third launch!
+          These improvements are permanent and do not require any extra launches going forward.
+        </Text>
+    },
+    {
+      title: "GPU",
+      content:
+        <Text onBackground="neutral-weak">
+          The GPU emulator emulates the Switch's Maxwell GPU using either the OpenGL (version 4.5 minimum), Vulkan, or Metal (via MoltenVK) APIs through <a href="https://opentk.net/">OpenTK</a> or <a href="https://dotnet.github.io/Silk.NET/">Silk.NET</a> respectively.<br/>
+          There are currently six graphics enhancements available to the end user in Ryujinx:
+          <ul>
+            <li>Disk Shader Caching</li>
+            <li>Resolution Scaling</li>
+            <li>Anti-Aliasing</li>
+            <li>Scaling Filters (including FSR)</li>
+            <li>Anisotropic Filtering</li>
+            <li>Aspect Ratio Adjustment</li>
+          </ul>
+          <br/>
+          These enhancements can be adjusted or toggled as desired in the GUI.
+        </Text>
+    },
+    {
+      title: "Input",
+      content:
+        <Text onBackground="neutral-weak">
+          We currently have support for keyboard, mouse, touch input, Joy-Con input support, and nearly all controllers.
+          Motion controls are natively supported in most cases; for dual-JoyCon motion support, DS4Windows or BetterJoy are currently required.<br/><br/>
+          In all scenarios, you can set up everything inside the input configuration menu.
+        </Text>
+    },
+    {
+      title: "DLC & Modifications",
+      content:
+        <Text onBackground="neutral-weak">
+          Ryujinx is able to manage add-on content/downloadable content through the GUI.<br/><br/>
+          Mods (romfs, exefs, and runtime mods such as cheats) are also supported;
+          the GUI contains a shortcut to open the respective mods folder for a particular game.
+        </Text>
+    },
+    {
+      title: "Configuration",
+      content:
+        <Text onBackground="neutral-weak">
+          The emulator has settings for enabling or disabling some logging, remapping controllers, and more.<br/>
+          You can configure all of them through the graphical interface or manually through the config file, <code>Config.json</code>, found in the Ryujinx data folder which can be accessed by clicking <code>Open Ryujinx Folder</code> under the File menu in the GUI.
+        </Text>
+    }
+  ]}
+/>
+
+## License
+
+This software is licensed under the terms of the [MIT license](https://git.ryujinx.app/projects/Ryubing/src/branch/master/LICENSE.txt).
+This project makes use of code authored by the [libvpx](https://github.com/webmproject/libvpx/) project, licensed under BSD and the [ffmpeg](https://code.ffmpeg.org/FFmpeg/FFmpeg) project, licensed under LGPLv3.
+See [LICENSE.txt](https://git.ryujinx.app/projects/Ryubing/src/branch/master/LICENSE.txt) and [THIRDPARTY.md](https://git.ryujinx.app/projects/Ryubing/src/branch/master/distribution/legal/THIRDPARTY.md) for more details.
+
+## Credits
+
+- [LibHac](https://git.ryujinx.app/projects/LibHac) is used for our file-system.
+- [AmiiboAPI](https://www.amiiboapi.com) is used in our Amiibo emulation.
+- [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm) is used for one of our available multiplayer modes.
+- [ShellLink](https://github.com/securifybv/ShellLink) is used for Windows shortcut generation.

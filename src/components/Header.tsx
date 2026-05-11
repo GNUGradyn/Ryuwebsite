@@ -117,6 +117,19 @@ export const Header = () => {
                   href={Consts.SourceCode}
                   />
               </Row>
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="server"
+                  href="https://ldn.ryujinx.app"
+                  label="LDN"
+                  />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="server"
+                  href="https://ldn.ryujinx.app"
+                  />
+              </Row>
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <Row s={{ hide: true }}>
                 <ToggleButton

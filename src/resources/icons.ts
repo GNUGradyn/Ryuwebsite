@@ -21,7 +21,8 @@ import {
 } from "react-icons/pi";
 
 import {
-  GoHeart
+  GoHeart,
+  GoServer
 } from "react-icons/go";
 
 import {
@@ -49,6 +50,7 @@ export const iconLibrary: Record<string, IconType> = {
   eye: HiOutlineEye,
   eyeOff: HiOutlineEyeSlash,
   github: FaGithub,
+  server: GoServer,
   forgejo: SiForgejo,
   ghost: SiGhost,
   code: FaCode,

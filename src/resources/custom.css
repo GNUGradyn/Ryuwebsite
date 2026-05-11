@@ -49,6 +49,20 @@
   --scheme-accent-1100: #ffc6b6;
   --scheme-accent-1200: #ffc6b6;
 
+  .ryu-gradient-text {
+    background: linear-gradient(to right, #02c5e5 0%, #ff5f56 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .forgejo-gradient-text {
+    background: linear-gradient(to right, #ff6600 0%, #cc0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   /*
   --scheme-neutral-100:  #020b10;
   --scheme-neutral-200:  #0b181d;

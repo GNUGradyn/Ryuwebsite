@@ -82,3 +82,18 @@ export interface Downloads extends BasePageConfig {
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
 }
+
+/**
+ * Donate page configuration.
+ */
+export interface Donate extends BasePageConfig {
+  /** The image to be displayed in metadata
+   *
+   * The image needs to be put inside `/public/images/` directory
+   */
+  image: `/images/${string}` | string;
+  /** The headline of the donate page */
+  headline: React.ReactNode;
+  /** The sub text which appears below the headline */
+  subline: React.ReactNode;
+}

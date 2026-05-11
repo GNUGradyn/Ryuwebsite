@@ -1,10 +1,11 @@
+import Consts from "@/utils";
 import { notFound } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 
 const redirects: Record<string, string> = {
-  discord: "https://discord.gg/XN4xJWGzq5",
+  discord: Consts.DiscordInvite,
   github: "https://github.com/Ryubing",
-  code: "https://git.ryujinx.app/projects/Ryubing",
+  code: Consts.SourceCode,
 }
 
 export async function GET(_req: NextRequest, ctx: RouteContext<"/r/[slug]">) {

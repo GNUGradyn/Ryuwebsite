@@ -1,4 +1,5 @@
-import { Home, Downloads, Social } from "@/types";
+import { Home, Downloads, Social, Donate } from "@/types";
+import Consts from "@/utils";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const social: Social = [
@@ -8,7 +9,13 @@ const social: Social = [
   {
     name: "Forgejo",
     icon: "forgejo",
-    link: "https://git.ryujinx.app/projects/Ryubing",
+    link: Consts.SourceCode,
+    essential: true,
+  },
+  {
+    name: "Discord",
+    icon: "discord",
+    link: Consts.DiscordInvite,
     essential: true,
   },
   {
@@ -27,6 +34,12 @@ const social: Social = [
     name: "Reddit",
     icon: "reddit",
     link: "https://reddit.com/r/Ryubing",
+    essential: true,
+  },
+  {
+    name: "Blog",
+    icon: "ghost",
+    link: "https://blog.ryujinx.app",
     essential: true,
   }
 ];
@@ -70,4 +83,16 @@ const downloads: Downloads = {
   ),
 };
 
-export { social, home, downloads };
+const donate: Donate = {
+  path: "/donate",
+  image: "/images/logo.png",
+  label: "Donate",
+  title: "Ryubing - Donate",
+  description: `Ryubing/Ryujinx is a fork of the discontinued Nintendo Switch emulator, written in C#. It offers excellent accuracy, high performance, a user-friendly interface, and consistent builds.`,
+  headline: <>Donate</>,
+  subline: (
+    <>Want to support the project? That's awesome, thank you for supporting us!</>
+  ),
+};
+
+export { social, home, downloads, donate };

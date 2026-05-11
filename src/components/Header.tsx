@@ -8,6 +8,8 @@ import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 import {  display, downloads } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import Consts from "@/utils";
+import { donate } from "@/resources/content";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -106,14 +108,14 @@ export const Header = () => {
               <Row s={{ hide: true }}>
                 <ToggleButton
                   prefixIcon="code"
-                  href="https://git.ryujinx.app/projects/Ryubing"
+                  href={Consts.SourceCode}
                   label="Code"
                   />
               </Row>
               <Row hide s={{ hide: false }}>
                 <ToggleButton
                   prefixIcon="code"
-                  href="https://git.ryujinx.app/projects/Ryubing"
+                  href={Consts.SourceCode}
                   />
               </Row>
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
@@ -141,6 +143,19 @@ export const Header = () => {
                 <ToggleButton
                   prefixIcon="ghost"
                   href="https://blog.ryujinx.app"
+                />
+              </Row>
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="heart"
+                  href={donate.path}
+                  label={donate.label}
+                />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="heart"
+                  href={donate.path}
                 />
               </Row>
               {display.themeSwitcher && (

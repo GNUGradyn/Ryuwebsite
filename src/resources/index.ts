@@ -2,7 +2,8 @@
 export {
   social,
   home,
-  downloads
+  downloads,
+  donate
 } from "./content";
 
 export {

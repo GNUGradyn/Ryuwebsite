@@ -1,6 +1,10 @@
 import { IconType } from "react-icons";
 
 import {
+  HiDownload
+} from "react-icons/hi";
+
+import {
   HiArrowUpRight,
   HiOutlineLink,
   HiArrowTopRightOnSquare,
@@ -13,9 +17,12 @@ import {
 
 import {
   PiHouseDuotone,
-  PiBookBookmarkDuotone,
-  PiDownload
+  PiBookBookmarkDuotone
 } from "react-icons/pi";
+
+import {
+  GoHeart
+} from "react-icons/go";
 
 import {
   SiDotnet,
@@ -26,7 +33,6 @@ import {
 import { 
   FaDiscord, 
   FaGithub,
-  FaXTwitter,
   FaReddit, 
   FaBluesky,
   FaCode
@@ -37,7 +43,7 @@ export const iconLibrary: Record<string, IconType> = {
   arrowRight: HiArrowRight,
   book: PiBookBookmarkDuotone,
   openLink: HiOutlineLink,
-  download: PiDownload,
+  download: HiDownload,
   home: PiHouseDuotone,
   discord: FaDiscord,
   eye: HiOutlineEye,
@@ -46,7 +52,7 @@ export const iconLibrary: Record<string, IconType> = {
   forgejo: SiForgejo,
   ghost: SiGhost,
   code: FaCode,
-  twitter: FaXTwitter,
+  heart: GoHeart,
   bluesky: FaBluesky,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,

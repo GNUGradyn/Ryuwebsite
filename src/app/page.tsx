@@ -11,6 +11,7 @@ import {
 } from "@once-ui-system/core";
 import { home, baseURL } from "@/resources";
 import { UserAgentDownloadButton } from "@/components";
+import Consts from "@/utils";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -72,7 +73,7 @@ export default function Home() {
           <RevealFx translateY="12" delay={0.4} fillWidth horizontal="center" paddingBottom="32">
             <Row gap="l">
               <UserAgentDownloadButton/>
-              <Button variant="tertiary" style={{ backgroundColor: '#5865F2' }} prefixIcon="discord" label="Join Discord" href="https://discord.gg/XN4xJWGzq5"/>
+              <Button variant="tertiary" style={{ backgroundColor: '#5865F2' }} prefixIcon="discord" label="Join Discord" href={Consts.DiscordInvite}/>
             </Row>
           </RevealFx>
           <RevealFx translateY="16" delay={0.4} fillWidth horizontal="stretch" paddingTop="64" paddingBottom="32">

@@ -72,9 +72,9 @@ const style: StyleConfig = {
   neutral: "slate", // sand | gray | slate | mint | rose | dusk | custom
   brand: "custom", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   accent: "custom", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  solid: "color", // color | contrast
+  solid: "inverse", // color | contrast
   solidStyle: "plastic", // flat | plastic
-  border: "playful", // rounded | playful | conservative | sharp
+  border: "rounded", // rounded | playful | conservative | sharp
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
@@ -99,18 +99,18 @@ const effects: EffectsConfig = {
     cursor: true,
     x: 0,
     y: 0,
-    radius: 75,
+    radius: 50,
   },
   gradient: {
-    display: false,
+    display: true,
     opacity: 100,
     x: 50,
     y: 60,
-    width: 100,
-    height: 50,
+    width: 60,
+    height: 60,
     tilt: 0,
     colorStart: "accent-background-strong",
-    colorEnd: "page-background",
+    colorEnd: "brand-background-strong",
   },
   dots: {
     display: false,
@@ -119,19 +119,19 @@ const effects: EffectsConfig = {
     color: "brand-background-strong",
   },
   grid: {
-    display: true,
+    display: false,
     opacity: 45,
-    color: "brand-background-strong",
+    color: "accent-background-medium",
     width: "0.5rem",
     height: "0.5rem",
   },
   lines: {
     display: false,
     opacity: 100,
-    color: "neutral-alpha-weak",
+    color: "accent-background-medium",
     size: "16",
     thickness: 1,
-    angle: 45,
+    angle: 0,
   },
 };
 

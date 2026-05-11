@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { donate, display, downloads } from "@/resources";
+import { donate, display, downloads, home } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 import Consts from "@/utils";
@@ -87,13 +87,14 @@ export const Header = () => {
             zIndex={1}
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
-              <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+              <ToggleButton prefixIcon="home" href={home.path} selected={pathname === home.path} />
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <Row s={{ hide: true }}>
                 <ToggleButton
                   prefixIcon="download"
                   href={downloads.path}
                   label={downloads.label}
+                  selected={pathname === downloads.path}
                   />
               </Row>
               {/*
@@ -102,8 +103,25 @@ export const Header = () => {
                 <ToggleButton
                   prefixIcon="download"
                   href={downloads.path}
+                  selected={pathname === downloads.path}
                   />
               </Row>*/}
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="heart"
+                  href={donate.path}
+                  label={donate.label}
+                  selected={pathname === donate.path}
+                />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="heart"
+                  href={donate.path}
+                  selected={pathname === donate.path}
+                />
+              </Row>
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <Row s={{ hide: true }}>
                 <ToggleButton
                   prefixIcon="code"
@@ -117,20 +135,6 @@ export const Header = () => {
                   href={Consts.SourceCode}
                   />
               </Row>
-              <Row s={{ hide: true }}>
-                <ToggleButton
-                  prefixIcon="server"
-                  href="https://ldn.ryujinx.app"
-                  label="LDN"
-                  />
-              </Row>
-              <Row hide s={{ hide: false }}>
-                <ToggleButton
-                  prefixIcon="server"
-                  href="https://ldn.ryujinx.app"
-                  />
-              </Row>
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <Row s={{ hide: true }}>
                 <ToggleButton
                   prefixIcon="book"
@@ -159,16 +163,16 @@ export const Header = () => {
               </Row>
               <Row s={{ hide: true }}>
                 <ToggleButton
-                  prefixIcon="heart"
-                  href={donate.path}
-                  label={donate.label}
-                />
+                  prefixIcon="server"
+                  href="https://ldn.ryujinx.app"
+                  label="LDN"
+                  />
               </Row>
               <Row hide s={{ hide: false }}>
                 <ToggleButton
-                  prefixIcon="heart"
-                  href={donate.path}
-                />
+                  prefixIcon="server"
+                  href="https://ldn.ryujinx.app"
+                  />
               </Row>
               {display.themeSwitcher && (
                 <>

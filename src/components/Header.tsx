@@ -5,11 +5,10 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import {  display, downloads } from "@/resources";
+import { donate, display, downloads } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 import Consts from "@/utils";
-import { donate } from "@/resources/content";
 
 type TimeDisplayProps = {
   timeZone: string;

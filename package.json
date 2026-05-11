@@ -1,5 +1,5 @@
 {
-  "name": "greemdev-site",
+  "name": "ryubing-site",
   "version": "1.0.0",
   "scripts": {
     "build": "next build",
@@ -10,8 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.0",
-    "@next/mdx": "^16.0.10",
     "@once-ui-system/core": "latest",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
@@ -20,7 +18,6 @@
     "gray-matter": "^4.0.3",
     "lint-staged": "^16.1.5",
     "next": "^16.0.10",
-    "next-mdx-remote": "^6.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",

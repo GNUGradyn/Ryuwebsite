@@ -1,4 +1,4 @@
-/* :root {
+:root {
   /*
   /* Override default variables here */
   /*
@@ -17,39 +17,39 @@
   /*
   /* Example setup for custom colors */
   /* Generate at: https://once-ui.com/customize */
+  --scheme-brand-100: #1e0000;
+  --scheme-brand-200: #370000;
+  --scheme-brand-300: #880000;
+  --scheme-brand-400: #b60716;
+  --scheme-brand-500: #da3b37;
+  --scheme-brand-600: #ff6158;
+  --scheme-brand-600-15: rgba(255,97,88,0.15);
+  --scheme-brand-600-30: rgba(255,97,88,0.3);
+  --scheme-brand-600-50: rgba(255,97,88,0.5);
+  --scheme-brand-700: #ff9789;
+  --scheme-brand-800: #ffc6b6;
+  --scheme-brand-900: #ffc6b6;
+  --scheme-brand-1000: #ffc6b6;
+  --scheme-brand-1100: #ffc6b6;
+  --scheme-brand-1200: #ffc6b6;
+
+  --scheme-accent-100: #000725;
+  --scheme-accent-200: #001632;
+  --scheme-accent-300: #004562;
+  --scheme-accent-400: #006280;
+  --scheme-accent-500: #00809f;
+  --scheme-accent-600: #00a5c5;
+  --scheme-accent-600-15: rgba(0,165,197,0.15);
+  --scheme-accent-600-30: rgba(0,165,197,0.3);
+  --scheme-accent-600-50: rgba(0,165,197,0.5);
+  --scheme-accent-700: #06c6e6;
+  --scheme-accent-800: #4be7ff;
+  --scheme-accent-900: #60f8ff;
+  --scheme-accent-1000: #83ffff;
+  --scheme-accent-1100: #83ffff;
+  --scheme-accent-1200: #83ffff;
+
   /*
-  --scheme-brand-100: #08002f;
-  --scheme-brand-200:  #04025c;
-  --scheme-brand-300:  #1f398e;
-  --scheme-brand-400:  #3856ae;
-  --scheme-brand-500:  #5071cc;
-  --scheme-brand-600:  #6f94f1;
-  --scheme-brand-700:  #8db3ff;
-  --scheme-brand-800:  #b2dbff;
-  --scheme-brand-900:  #bfe8ff;
-  --scheme-brand-1000: #ccf6ff;
-  --scheme-brand-1100: #d2fcff;
-  --scheme-brand-1200: #d2fcff;
-  --scheme-brand-600-10: rgba(111,148,241,0.1);
-  --scheme-brand-600-30: rgba(111,148,241,0.3);
-  --scheme-brand-600-50: rgba(111,148,241,0.5);
-
-  --scheme-accent-100:  #030b10;
-  --scheme-accent-200:  #0d181d;
-  --scheme-accent-300:  #364248;
-  --scheme-accent-400:  #505d64;
-  --scheme-accent-500:  #69777e;
-  --scheme-accent-600:  #8a989f;
-  --scheme-accent-700:  #a8b7bf;
-  --scheme-accent-800:  #c8d7df;
-  --scheme-accent-900:  #d5e4ec;
-  --scheme-accent-1000: #e2f1f9;
-  --scheme-accent-1100: #e9f8ff;
-  --scheme-accent-1200: #efffff;
-  --scheme-accent-600-10: rgba(138,152,159,0.1);
-  --scheme-accent-600-30: rgba(138,152,159,0.3);
-  --scheme-accent-600-50: rgba(138,152,159,0.5);
-
   --scheme-neutral-100:  #020b10;
   --scheme-neutral-200:  #0b181d;
   --scheme-neutral-300:  #344248;
@@ -65,5 +65,5 @@
   --scheme-neutral-600-10: rgba(137,152,159,0.1);
   --scheme-neutral-600-30: rgba(137,152,159,0.3);
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
-  /*
-}*/
+  */
+}

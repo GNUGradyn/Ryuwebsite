@@ -1,5 +1,5 @@
 import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
-import { person, social } from "@/resources";
+import { home, social } from "@/resources";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
@@ -23,7 +23,7 @@ export const Footer = () => {
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
+          <Text paddingX="4">{home.title}</Text>
           <Text onBackground="neutral-weak">
             / Built with{" "}
             <SmartLink href="https://once-ui.com/">Once UI</SmartLink>

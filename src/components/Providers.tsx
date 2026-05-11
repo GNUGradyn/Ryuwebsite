@@ -7,9 +7,7 @@ import {
   DataThemeProvider,
   IconProvider,
   LayoutProvider,
-  NeutralColor,
   ScalingSize,
-  Schemes,
   SolidStyle,
   SolidType,
   SurfaceStyle,
@@ -24,9 +22,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <LayoutProvider>
       <ThemeProvider
-        brand={style.brand as Schemes}
-        accent={style.accent as Schemes}
-        neutral={style.neutral as NeutralColor}
+        brand={style.brand}
+        accent={style.accent}
+        neutral={style.neutral}
         solid={style.solid as SolidType}
         solidStyle={style.solidStyle as SolidStyle}
         border={style.border as BorderStyle}

@@ -3,9 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Fade, Flex, Line, Row, ToggleButton, Button } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work } from "@/resources";
+import {  display } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -86,67 +86,47 @@ export const Header = () => {
             zIndex={1}
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
-              {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
-              )}
+              <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/about"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href={about.path}
-                      label={about.label}
-                      selected={pathname === about.path}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href={about.path}
-                      selected={pathname === about.path}
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/work"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href={work.path}
-                      label={work.label}
-                      selected={pathname.startsWith(work.path)}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href={work.path}
-                      selected={pathname.startsWith(work.path)}
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/blog"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="book"
-                      href={blog.path}
-                      label={blog.label}
-                      selected={pathname.startsWith(blog.path)}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="book"
-                      href={blog.path}
-                      selected={pathname.startsWith(blog.path)}
-                    />
-                  </Row>
-                </>
-              )}
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="code"
+                  href="https://git.ryujinx.app/projects/Ryubing"
+                  label="Code"
+                  />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="code"
+                  href="https://git.ryujinx.app/projects/Ryubing"
+                  />
+              </Row>
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="book"
+                  href="https://docs.ryujinx.app"
+                  label="Docs"
+                />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="book"
+                  href="https://docs.ryujinx.app"
+                />
+              </Row>
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="ghost"
+                  href="https://blog.ryujinx.app"
+                  label="Blog"
+                />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="ghost"
+                  href="https://blog.ryujinx.app"
+                />
+              </Row>
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />

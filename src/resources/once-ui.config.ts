@@ -7,19 +7,17 @@ import {
   RoutesConfig,
   SameAsConfig,
   SchemaConfig,
-  SocialSharingConfig,
   StyleConfig
 } from "@/types";
 import { home } from "./index";
 
 // IMPORTANT: used for SEO in meta tags and schema
-const baseURL: string = "https://greemdev.net";
+const baseURL: string = "https://ryujinx.app";
 
 const routes: RoutesConfig = {
   "/": true,
-  "/about": true,
-  "/work": true,
-  "/blog": true,
+  "/download": true,
+  "/donate": true,
   "/r": true
 };
 
@@ -71,13 +69,13 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | mint | rose | dusk | custom
-  brand: "green", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  neutral: "slate", // sand | gray | slate | mint | rose | dusk | custom
+  brand: "custom", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "custom", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "color", // color | contrast
   solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative | sharp
-  surface: "filled", // filled | translucent
+  surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };
@@ -122,10 +120,10 @@ const effects: EffectsConfig = {
   },
   grid: {
     display: true,
-    opacity: 100,
-    color: "accent-background-strong",
-    width: "0.50rem",
-    height: "0.50rem",
+    opacity: 45,
+    color: "brand-background-strong",
+    width: "0.5rem",
+    height: "0.5rem",
   },
   lines: {
     display: false,
@@ -141,7 +139,7 @@ const effects: EffectsConfig = {
 const schema: SchemaConfig = {
   logo: "",
   type: "Organization",
-  name: "GreemDev",
+  name: "Ryubing",
   description: home.description,
   email: "greemdev@ryujinx.app",
 };
@@ -153,23 +151,6 @@ const sameAs: SameAsConfig = {
   discord: "https://discord.com/invite/H8bcFr2",
 };
 
-// social sharing configuration for blog posts
-const socialSharing: SocialSharingConfig = {
-  display: true,
-  platforms: {
-    x: false,
-    linkedin: false,
-    bluesky: true,
-    facebook: true,
-    pinterest: true,
-    whatsapp: true,
-    reddit: true,
-    telegram: false,
-    email: true,
-    copyLink: true,
-  },
-};
-
 export {
   display,
   routes,
@@ -179,7 +160,6 @@ export {
   style,
   schema,
   sameAs,
-  socialSharing,
   effects,
   dataStyle,
 };

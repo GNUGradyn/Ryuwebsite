@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { baseURL, person } from "@/resources";
+import { baseURL, home } from "@/resources";
 
 export const runtime = "nodejs";
 
@@ -63,7 +63,7 @@ export async function GET(request: Request) {
           }}
         >
           <img
-            src={baseURL + person.avatar}
+            src={baseURL + home.image}
             style={{
               width: "12rem",
               height: "12rem",
@@ -86,18 +86,7 @@ export async function GET(request: Request) {
                 textWrap: "balance",
               }}
             >
-              {person.name}
-            </span>
-            <span
-              style={{
-                fontSize: "2.5rem",
-                lineHeight: "2.5rem",
-                whiteSpace: "pre-wrap",
-                textWrap: "balance",
-                opacity: "0.6",
-              }}
-            >
-              {person.role}
+              {home.title}
             </span>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Home, Social } from "@/types";
+import { Home, Downloads, Social } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const social: Social = [
@@ -33,7 +33,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/logo.svg",
+  image: "/images/logo.png",
   label: "Home",
   title: "Ryubing",
   description: `Ryubing/Ryujinx is a fork of the discontinued Nintendo Switch emulator, written in C#. It offers excellent accuracy, high performance, a user-friendly interface, and consistent builds.`,
@@ -58,4 +58,16 @@ const home: Home = {
   ),
 };
 
-export { social, home };
+const downloads: Downloads = {
+  path: "/download",
+  image: "/images/logo.png",
+  label: "Downloads",
+  title: "Ryubing - Download",
+  description: `Ryubing/Ryujinx is a fork of the discontinued Nintendo Switch emulator, written in C#. It offers excellent accuracy, high performance, a user-friendly interface, and consistent builds.`,
+  headline: <>Get Ryubing</>,
+  subline: (
+    <>Download Ryujinx for Windows 10 & 11, macOS, and Linux.</>
+  ),
+};
+
+export { social, home, downloads };

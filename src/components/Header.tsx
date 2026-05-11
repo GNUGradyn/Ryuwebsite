@@ -3,9 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, Row, ToggleButton, Button } from "@once-ui-system/core";
+import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import {  display } from "@/resources";
+import {  display, downloads } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -90,6 +90,21 @@ export const Header = () => {
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <Row s={{ hide: true }}>
                 <ToggleButton
+                  prefixIcon="download"
+                  href={downloads.path}
+                  label={downloads.label}
+                  />
+              </Row>
+              {/*
+              uncomment to show download page in header on mobile
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="download"
+                  href={downloads.path}
+                  />
+              </Row>*/}
+              <Row s={{ hide: true }}>
+                <ToggleButton
                   prefixIcon="code"
                   href="https://git.ryujinx.app/projects/Ryubing"
                   label="Code"
@@ -101,6 +116,7 @@ export const Header = () => {
                   href="https://git.ryujinx.app/projects/Ryubing"
                   />
               </Row>
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <Row s={{ hide: true }}>
                 <ToggleButton
                   prefixIcon="book"

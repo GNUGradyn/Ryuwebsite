@@ -2,6 +2,7 @@
 export {
   social,
   home,
+  downloads
 } from "./content";
 
 export {

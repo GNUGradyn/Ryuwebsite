@@ -67,3 +67,18 @@ export interface Home extends BasePageConfig {
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
 }
+
+/**
+ * Downloads page configuration.
+ */
+export interface Downloads extends BasePageConfig {
+  /** The image to be displayed in metadata
+   *
+   * The image needs to be put inside `/public/images/` directory
+   */
+  image: `/images/${string}` | string;
+  /** The headline of the downloads page */
+  headline: React.ReactNode;
+  /** The sub text which appears below the headline */
+  subline: React.ReactNode;
+}

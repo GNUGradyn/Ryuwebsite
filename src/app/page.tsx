@@ -7,8 +7,10 @@ import {
   Schema,
   Meta,
   Media,
+  Button,
 } from "@once-ui-system/core";
 import { home, baseURL } from "@/resources";
+import { UserAgentDownloadButton } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -59,7 +61,7 @@ export default function Home() {
               </Badge>
             </RevealFx>
           )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="32">
+          <RevealFx translateY="4" delay={0.1} fillWidth horizontal="center" paddingBottom="32">
             <Media src="/images/wordmark.svg" maxWidth={20}/>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
@@ -67,7 +69,13 @@ export default function Home() {
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx translateY="16" delay={0.2} fillWidth horizontal="stretch" paddingBottom="32">
+          <RevealFx translateY="12" delay={0.4} fillWidth horizontal="center" paddingBottom="32">
+            <Row gap="l">
+              <UserAgentDownloadButton/>
+              <Button variant="tertiary" style={{ backgroundColor: '#5865F2' }} prefixIcon="discord" label="Join Discord" href="https://discord.gg/XN4xJWGzq5"/>
+            </Row>
+          </RevealFx>
+          <RevealFx translateY="16" delay={0.4} fillWidth horizontal="stretch" paddingTop="64" paddingBottom="32">
             <Media src="/images/hero.png"/>
           </RevealFx>
         </Column>

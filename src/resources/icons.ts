@@ -8,12 +8,13 @@ import {
   HiOutlineEye,
   HiOutlineEyeSlash,
   HiOutlineDocument,
-  HiOutlineRocketLaunch,
+  HiOutlineRocketLaunch
 } from "react-icons/hi2";
 
 import {
   PiHouseDuotone,
   PiBookBookmarkDuotone,
+  PiDownload
 } from "react-icons/pi";
 
 import {
@@ -36,6 +37,7 @@ export const iconLibrary: Record<string, IconType> = {
   arrowRight: HiArrowRight,
   book: PiBookBookmarkDuotone,
   openLink: HiOutlineLink,
+  download: PiDownload,
   home: PiHouseDuotone,
   discord: FaDiscord,
   eye: HiOutlineEye,

@@ -104,6 +104,8 @@ const downloads: Downloads = {
   title: "Ryubing - Download",
   description: `Ryubing/Ryujinx is a fork of the discontinued Nintendo Switch emulator, written in C#. It offers excellent accuracy, high performance, a user-friendly interface, and consistent builds.`,
   headline: <>Get Ryubing</>,
+  headlineCanary: <>Get Ryubing Canary</>,
+  headlineKenji: <>Get Kenji-NX</>,
   subline: (
     <>Download Ryujinx for Windows 10 & 11, macOS, and Linux.</>
   ),

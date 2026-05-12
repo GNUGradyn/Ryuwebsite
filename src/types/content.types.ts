@@ -79,6 +79,10 @@ export interface Downloads extends BasePageConfig {
   image: `/images/${string}` | string;
   /** The headline of the downloads page */
   headline: React.ReactNode;
+  /** The headline of the Canary downloads page */
+  headlineCanary: React.ReactNode;
+  /** The headline of the Kenji-NX downloads page */
+  headlineKenji: React.ReactNode;
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
 }

@@ -138,8 +138,8 @@ export default async function Downloads({
               </Badge>
             </RevealFx>
           )}
-          <RevealFx translateY="16" delay={0.4} fillWidth horizontal="center">
-            <Column horizontal="center" gap="l">
+          <RevealFx translateY="16" delay={0.4} horizontal="center">
+            <Column horizontal="center" gap="l" fillWidth>
               <Row gap="l" fillWidth>
                 <Card radius="l-4" direction="column" border="brand-strong" horizontal="center">
                   <Row fillWidth paddingX="20" paddingY="12" gap="xs" horizontal="center">
@@ -197,7 +197,7 @@ export default async function Downloads({
                   </Row>
                   <Line background="neutral-alpha-medium" />
                   <Column gap="s" padding="m">
-                    <Row horizontal="center" gap="m">
+                    <Row horizontal="center" gap="s">
                       <DownloadButton
                         platform="linux"
                         cpu="x64"
@@ -211,7 +211,7 @@ export default async function Downloads({
                         getLabel={(_, cpu, ___) => `Tarball: ${formatSupportedCPU(cpu)}`}
                       />
                     </Row>
-                    <Row horizontal="center" gap="m">
+                    <Row horizontal="center" gap="s">
                       <DownloadButton
                         platform="linuxai"
                         cpu="x64"
@@ -231,7 +231,6 @@ export default async function Downloads({
             </Column>
           </RevealFx>
           <RevealFx translateY="20" delay={0.4} fillWidth horizontal="center" paddingTop="32">
-            <Row gap="l">
               <Button
                 variant="tertiary"
                 style={{ backgroundColor: "#5865F2" }}
@@ -239,7 +238,6 @@ export default async function Downloads({
                 label="Join Discord"
                 href={Consts.DiscordInvite}
               />
-            </Row>
           </RevealFx>
         </Column>
       </Column>

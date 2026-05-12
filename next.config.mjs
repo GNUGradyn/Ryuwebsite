@@ -15,6 +15,11 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/u/28578990",
+      },
+      {
+        protocol: "https",
         hostname: "img.shields.io",
         pathname: "**",
       },

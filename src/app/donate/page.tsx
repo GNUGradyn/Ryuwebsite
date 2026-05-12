@@ -15,7 +15,7 @@ import {
   ListItem,
   IconButton,
 } from "@once-ui-system/core";
-import {donate, baseURL, donateSocials } from "@/resources";
+import { donate, baseURL, donateSocials } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -59,117 +59,106 @@ export default function Donate() {
             </Text>
           </RevealFx>
           <RevealFx translateY="12" delay={0.2} fillWidth horizontal="center">
-            <Row>
-              <Card radius="l-4" direction="column" border="accent-strong" horizontal="center">
-                <Row fillWidth paddingX="20" paddingY="12" gap="l" horizontal="center">
-                  <Avatar size="xl" src="/images/avatar.png" />
-                  <Line background="neutral-alpha-medium" vert />
-                  <Column vertical="center">
-                    <Heading>
-                      <SmartLink href="https://greemdev.net" target="_blank">
-                        GreemDev
-                      </SmartLink>
-                    </Heading>
-                    <Text variant="body-default-xl">Former maintainer, current system admin</Text>
-                    <Row gap="16">
-                      {donateSocials.map(
-                          (item) =>
-                              item.link && (
-                                  <IconButton
-                                      key={item.name}
-                                      href={item.link}
-                                      icon={item.icon}
-                                      tooltip={item.name}
-                                      size="m"
-                                      variant="ghost"
-                                  />
-                              ),
-                      )}
-                    </Row>
-                  </Column>
-                </Row>
-                <Line background="neutral-alpha-medium" />
-                <Column fillWidth paddingX="20" paddingY="24" gap="8">
-                  <Text onBackground="neutral-weak" variant="body-default-xl">
-                    My main projects are a fork of{" "}
-                    <SmartLink
-                      href="https://github.com/gruke-build/src"
-                    >
-                      NUKE
+            <Card radius="l-4" direction="column" border="accent-strong" horizontal="center">
+              <Row fillWidth paddingX="20" paddingY="12" gap="l" horizontal="center">
+                <Avatar size="xl" src="https://avatars.githubusercontent.com/u/28578990?v=4" />
+                <Line background="neutral-alpha-medium" vert />
+                <Column vertical="center">
+                  <Heading>
+                    <SmartLink href="https://greemdev.net" target="_blank">
+                      GreemDev
                     </SmartLink>
-                    , and the Discord bot{" "}
-                    <SmartLink
-                      href="https://github.com/Polyhaze/Volte"
-                    >
-                      Volte
-                    </SmartLink>. 
-                    <br/><br/>
-                    I am no longer the project's maintainer, but I still maintain the server & CI
-                    infrastructure for this project; that is what donations to me directly fund.
-                  </Text>
-
-                  <Column horizontal="center">
-                    <Text wrap="nowrap" onBackground="neutral-weak" variant="body-default-xl">
-                      I also created:
-                    </Text>
-                    <List
-                      as="ul"
-                      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-                    >
-                      <ListItem as="li">
-                        The{" "}
-                        <SmartLink href="https://github.com/Ryubing/UpdateServer">
-                          Update Server
-                        </SmartLink>
-                      </ListItem>
-                      <ListItem as="li">
-                        The{" "}
-                        <SmartLink
-                          className="ryu-gradient-text"
-                          href="https://github.com/Ryubing/RyujinxHelper"
-                        >
-                          Ryujinx Helper
-                        </SmartLink>{" "}
-                        Discord bot
-                      </ListItem>
-                      <ListItem as="li">
-                        The <SmartLink href="https://github.com/GreemDev/GLI">GLI</SmartLink>{" "}
-                        command-line tool
-                      </ListItem>
-                      <ListItem as="li">
-                        The{" "}
-                        <SmartLink
-                          className="forgejo-gradient-text"
-                          href="https://github.com/Ryubing/forgejo"
-                        >
-                          fork of Forgejo
-                        </SmartLink>{" "}
-                        that hosts the project's code
-                      </ListItem>
-                    </List>
-                  </Column>
+                  </Heading>
+                  <Text variant="body-default-xl">Former maintainer, current system admin</Text>
+                  <Row gap="16">
+                    {donateSocials.map(
+                      (item) =>
+                        item.link && (
+                          <IconButton
+                            key={item.name}
+                            href={item.link}
+                            icon={item.icon}
+                            tooltip={item.name}
+                            size="m"
+                            variant="ghost"
+                          />
+                        ),
+                    )}
+                  </Row>
                 </Column>
-                <Line background="neutral-alpha-medium" />
-                <Row
-                  paddingX="20"
-                  paddingY="12"
-                  gap="8"
-                  vertical="center"
-                  textVariant="label-default-s"
-                  onBackground="neutral-medium"
-                  center
-                >
-                  <iframe
-                    src="https://github.com/sponsors/GreemDev/button"
-                    title="Sponsor GreemDev"
-                    height="32"
-                    width="114"
-                    style={{ border: 0, borderRadius: "6px" }}
-                    loading="lazy"
-                  />
-                </Row>
-              </Card>
-            </Row>
+              </Row>
+              <Line background="neutral-alpha-medium" />
+              <Column fillWidth paddingX="20" paddingY="24" gap="8">
+                <Text onBackground="neutral-weak" variant="body-default-xl">
+                  My main projects are a fork of{" "}
+                  <SmartLink href="https://github.com/gruke-build/src">NUKE</SmartLink>, and the
+                  Discord bot <SmartLink href="https://github.com/Polyhaze/Volte">Volte</SmartLink>.
+                  <br />
+                  <br />I am no longer the project's maintainer, but I still maintain the server &
+                  CI infrastructure for this project; that is what donations to me directly fund.
+                </Text>
+
+                <Column horizontal="center">
+                  <Text wrap="nowrap" onBackground="neutral-weak" variant="body-default-xl">
+                    I also created:
+                  </Text>
+                  <List
+                    as="ul"
+                    style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+                  >
+                    <ListItem as="li">
+                      The{" "}
+                      <SmartLink href="https://github.com/Ryubing/UpdateServer">
+                        Update Server
+                      </SmartLink>
+                    </ListItem>
+                    <ListItem as="li">
+                      The{" "}
+                      <SmartLink
+                        className="ryu-gradient-text"
+                        href="https://github.com/Ryubing/RyujinxHelper"
+                      >
+                        Ryujinx Helper
+                      </SmartLink>{" "}
+                      Discord bot
+                    </ListItem>
+                    <ListItem as="li">
+                      The <SmartLink href="https://github.com/GreemDev/GLI">GLI</SmartLink>{" "}
+                      command-line tool
+                    </ListItem>
+                    <ListItem as="li">
+                      The{" "}
+                      <SmartLink
+                        className="forgejo-gradient-text"
+                        href="https://github.com/Ryubing/forgejo"
+                      >
+                        fork of Forgejo
+                      </SmartLink>{" "}
+                      that hosts the project's code
+                    </ListItem>
+                  </List>
+                </Column>
+              </Column>
+              <Line background="neutral-alpha-medium" />
+              <Row
+                paddingX="20"
+                paddingY="12"
+                gap="8"
+                vertical="center"
+                textVariant="label-default-s"
+                onBackground="neutral-medium"
+                center
+              >
+                <iframe
+                  src="https://github.com/sponsors/GreemDev/button"
+                  title="Sponsor GreemDev"
+                  height="32"
+                  width="114"
+                  style={{ border: 0, borderRadius: "16px" }}
+                  loading="lazy"
+                />
+              </Row>
+            </Card>
           </RevealFx>
         </Column>
       </Column>

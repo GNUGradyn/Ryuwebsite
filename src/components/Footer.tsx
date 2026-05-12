@@ -1,4 +1,4 @@
-import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
+import { Row, IconButton, SmartLink, Text, Media } from "@once-ui-system/core";
 import { home, social } from "@/resources";
 import styles from "./Footer.module.scss";
 
@@ -21,14 +21,10 @@ export const Footer = () => {
           align: "center",
         }}
       >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{home.title}</Text>
-          <Text onBackground="neutral-weak">
-            / Built with{" "}
-            <SmartLink href="https://once-ui.com/">Once UI</SmartLink>
-          </Text>
-        </Text>
+          <Row fillWidth vertical="center" gap="4">
+              <Text onBackground="neutral-weak">© {currentYear} |</Text>
+              <Media src="images/logo.svg" maxWidth="32" maxHeight="32"/>
+          </Row>
         <Row gap="16">
           {social.map(
             (item) =>

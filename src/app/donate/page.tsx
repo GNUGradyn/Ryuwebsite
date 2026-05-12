@@ -13,8 +13,9 @@ import {
   SmartLink,
   List,
   ListItem,
+  IconButton,
 } from "@once-ui-system/core";
-import { donate, baseURL } from "@/resources";
+import {donate, baseURL, donateSocials } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -60,15 +61,31 @@ export default function Donate() {
           <RevealFx translateY="12" delay={0.2} fillWidth horizontal="center">
             <Row>
               <Card radius="l-4" direction="column" border="accent-strong" horizontal="center">
-                <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
+                <Row fillWidth paddingX="20" paddingY="12" gap="l" horizontal="center">
                   <Avatar size="xl" src="/images/avatar.png" />
-                  <Column>
+                  <Line background="neutral-alpha-medium" vert />
+                  <Column vertical="center">
                     <Heading>
                       <SmartLink href="https://greemdev.net" target="_blank">
                         GreemDev
                       </SmartLink>
                     </Heading>
                     <Text variant="body-default-xl">Former maintainer, current system admin</Text>
+                    <Row gap="16">
+                      {donateSocials.map(
+                          (item) =>
+                              item.link && (
+                                  <IconButton
+                                      key={item.name}
+                                      href={item.link}
+                                      icon={item.icon}
+                                      tooltip={item.name}
+                                      size="m"
+                                      variant="ghost"
+                                  />
+                              ),
+                      )}
+                    </Row>
                   </Column>
                 </Row>
                 <Line background="neutral-alpha-medium" />

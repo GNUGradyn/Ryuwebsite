@@ -28,28 +28,35 @@ import {
 import {
   SiDotnet,
   SiForgejo,
-  SiGhost
+  SiGhost,
+  SiCodeberg
 } from "react-icons/si";
 
 import { 
   FaDiscord, 
   FaGithub,
+  FaGitlab,
   FaReddit, 
   FaBluesky,
-  FaCode
+  FaCode,
+  FaLinux,
+  FaWindows
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
   arrowRight: HiArrowRight,
   book: PiBookBookmarkDuotone,
+  codeberg: SiCodeberg,
   openLink: HiOutlineLink,
   download: HiDownload,
   home: PiHouseDuotone,
   discord: FaDiscord,
   eye: HiOutlineEye,
+  tux: FaLinux,
   eyeOff: HiOutlineEyeSlash,
   github: FaGithub,
+  gitlab: FaGitlab,
   server: GoServer,
   forgejo: SiForgejo,
   ghost: SiGhost,
@@ -61,6 +68,7 @@ export const iconLibrary: Record<string, IconType> = {
   rocket: HiOutlineRocketLaunch,
   dotnet: SiDotnet,
   reddit: FaReddit,
+  windows: FaWindows
 };
 
 export type IconLibrary = typeof iconLibrary;

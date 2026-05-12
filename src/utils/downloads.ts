@@ -1,6 +1,6 @@
-type SupportedPlatform = "win" | "mac" | "linux" | "linuxai";
-type SupportedCPUs = "x64" | "arm64";
-type ReleaseChannel = "stable" | "canary" | "kenjinx";
+export type SupportedPlatform = "win" | "mac" | "linux" | "linuxai";
+export type SupportedCPUs = "x64" | "arm64";
+export type ReleaseChannel = "stable" | "canary" | "kenjinx";
 
 export class UpdateServerEndpoints {
   private static readonly _urlFormat: string =

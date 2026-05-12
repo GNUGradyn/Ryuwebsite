@@ -4,8 +4,7 @@ import { Line, Row, Text } from "@once-ui-system/core";
 
 const social: Social = [
   // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
+  // Import new icons in icons.ts
   {
     name: "Forgejo",
     icon: "forgejo",
@@ -40,6 +39,33 @@ const social: Social = [
     name: "Blog",
     icon: "ghost",
     link: "https://blog.ryujinx.app",
+    essential: true,
+  }
+];
+
+const donateSocials: Social = [
+  {
+    name: "BlueSky",
+    icon: "bluesky",
+    link: "https://bsky.app/profile/greemdev.net",
+    essential: true,
+  },
+  {
+    name: "Codeberg",
+    icon: "codeberg",
+    link: "https://codeberg.org/greem",
+    essential: true,
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/GreemDev",
+    essential: true,
+  },
+  {
+    name: "GitLab",
+    icon: "gitlab",
+    link: "https://gitlab.com/greemryu",
     essential: true,
   }
 ];
@@ -95,4 +121,4 @@ const donate: Donate = {
   ),
 };
 
-export { social, home, downloads, donate };
+export { social, home, downloads, donate, donateSocials };

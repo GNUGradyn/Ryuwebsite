@@ -31,12 +31,10 @@ export default async function Downloads(
     {
         searchParams,
     }: {
-        searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+        searchParams: Promise<{ [_: string]: string | string[] | undefined }>
     }
 ) {
-    const sp = (await searchParams);
-
-    console.log(JSON.stringify(sp))
+    const sp = await searchParams;
 
     let rawRc = sp.rc
 

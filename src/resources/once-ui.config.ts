@@ -135,21 +135,7 @@ const effects: EffectsConfig = {
   },
 };
 
-// default schema data
-const schema: SchemaConfig = {
-  logo: "",
-  type: "Organization",
-  name: "Ryubing",
-  description: home.description,
-  email: "greemdev@ryujinx.app",
-};
 
-// social links
-const sameAs: SameAsConfig = {
-  threads: "",
-  linkedin: "",
-  discord: "https://discord.com/invite/H8bcFr2",
-};
 
 export {
   display,
@@ -158,8 +144,6 @@ export {
   baseURL,
   fonts,
   style,
-  schema,
-  sameAs,
   effects,
   dataStyle,
 };

@@ -82,6 +82,31 @@ export default async function Downloads(
                             {downloads.subline}
                         </Text>
                     </RevealFx>
+                    {rc === "canary" && (
+                        <RevealFx
+                            fillWidth
+                            horizontal="center"
+                            paddingTop="16"
+                            paddingBottom="32"
+                            paddingLeft="12"
+                        >
+                            <Badge
+                                border="accent-alpha-strong"
+                                paddingX="12"
+                                paddingY="4"
+                                onBackground="neutral-strong"
+                                textVariant="label-default-s"
+                                arrow={false}
+                            >
+                                <Row paddingY="2">
+                                    <Row gap="12" vertical="center">
+                                        <Text className="ryu-gradient-text">Here be dragons! These are pre-release
+                                            Canary builds.</Text>
+                                    </Row>
+                                </Row>
+                            </Badge>
+                        </RevealFx>
+                    )}
                     {rc === "kenjinx" && (
                         <RevealFx
                             fillWidth

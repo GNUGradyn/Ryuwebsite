@@ -1,6 +1,6 @@
 import { Home, Downloads, Social, Donate } from "@/types";
 import Consts from "@/utils";
-import { Line, Row, Text } from "@once-ui-system/core";
+import {IconButton, Line, Row, Text} from "@once-ui-system/core";
 
 const social: Social = [
   // Links are automatically displayed.
@@ -78,17 +78,17 @@ const home: Home = {
   description: `Ryubing/Ryujinx is a fork of the discontinued Nintendo Switch emulator, written in C#. It offers excellent accuracy, high performance, a user-friendly interface, and consistent builds.`,
   headline: <>Ryubing</>,
   featured: {
-    display: false,
+    display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">GRUKE</strong>{" "}
+        <strong className="ml-4">We just rewrote this website!</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured
         </Text>
       </Row>
     ),
-    href: "https://nuke.greemdev.net/",
+    href: "https://github.com/Ryubing/WebsiteV2",
   },
   subline: (
     <>

@@ -88,7 +88,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "https://github.com/Ryubing/WebsiteV2",
+    href: "https://github.com/Ryubing/Website",
   },
   subline: (
     <>

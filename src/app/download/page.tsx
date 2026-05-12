@@ -39,7 +39,12 @@ export default async function Downloads(
     let rawRc = sp.rc
 
     if (rawRc === undefined) {
-        if (sp.canary !== undefined) {
+        if (sp.canary !== undefined ||
+            sp.beta !== undefined ||
+            sp.nightly !== undefined ||
+            sp.preview !== undefined ||
+            sp.prerelease !== undefined ||
+            sp.c !== undefined) {
             rawRc = "canary"
         } else if (sp.kenji !== undefined || sp.kenjinx !== undefined) {
             rawRc = "kenjinx"
@@ -50,6 +55,7 @@ export default async function Downloads(
         ? "stable"
         : rawRc.toLowerCase() as ReleaseChannel
 
+    // noinspection HtmlUnknownTarget
     return (
         <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
             <Schema

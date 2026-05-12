@@ -10,7 +10,7 @@ import {
     Row,
     Card,
     Line,
-    Icon
+    Icon, Badge
 } from "@once-ui-system/core";
 import {downloads, baseURL} from "@/resources";
 import Consts from "@/utils";
@@ -43,6 +43,8 @@ export default async function Downloads(
     if (rawRc === undefined) {
         if (sp.canary !== undefined) {
             rawRc = "canary"
+        } else if (sp.kenji !== undefined || sp.kenjinx !== undefined) {
+            rawRc = "kenjinx"
         }
     }
 
@@ -80,6 +82,29 @@ export default async function Downloads(
                             {downloads.subline}
                         </Text>
                     </RevealFx>
+                    {rc === "kenjinx" && (
+                        <RevealFx
+                            fillWidth
+                            horizontal="center"
+                            paddingTop="16"
+                            paddingBottom="32"
+                            paddingLeft="12"
+                        >
+                            <Badge
+                                paddingX="12"
+                                paddingY="4"
+                                onBackground="neutral-strong"
+                                textVariant="label-default-s"
+                                arrow={false}
+                            >
+                                <Row paddingY="2">
+                                    <Row gap="12" vertical="center">
+                                        <Text className="ryu-gradient-text">This page is actually for Kenji-NX.</Text>
+                                    </Row>
+                                </Row>
+                            </Badge>
+                        </RevealFx>
+                    )}
                     <RevealFx translateY="16" delay={0.4} fillWidth horizontal="center">
                         <Column horizontal="center" gap="l">
                             <Row gap="l" fillWidth>
